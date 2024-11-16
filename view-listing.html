@@ -4,87 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <title>Add New Listing</title>
+  <title>View Listing</title>
 </head>
 <body>
 
   <div class="form-container fixed-center">
     <div class="form-container__header">
-      <h5>Add new listing</h5>
+      <h5>Listing Details (Aspect-A101)</h5>
       <button><img src="assets/cross-without-border.svg" alt="Cross Icon"></button>
     </div>
     
     <form class="listing-form">
       <div class="listing-form__group relative">
         <label>Community <span>*</span></label>
-        <input type="text" placeholder="Business Bay">
-        <img src="assets/arrow-down.svg" alt="arrow down" class="absolute arrow-down">
+        <input type="text"  value="Business Bay" readonly>
       </div>
   
       <div class="listing-form__group relative">
         <label>Tower <span>*</span></label>
-        <input type="text" placeholder="Aspect Tower">
-        <img src="assets/arrow-down.svg" alt="arrow down" class="absolute arrow-down">
+        <input type="text"  value="Aspect Tower" readonly>
       </div>
   
       <div class="listing-form__group relative">
         <label>Unit no. <span>*</span></label>
-        <input type="text" placeholder="A101">
-        <img src="assets/arrow-down.svg" alt="arrow down" class="absolute arrow-down">
+        <input type="text"  value="A101" readonly>
       </div>
   
       <div class="listing-form__group relative">
         <label>Size (sqft) <span>*</span></label>
-        <input type="text" placeholder="2100">
-        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+        <input type="text"  value="2100" readonly>
       </div>
   
       <div class="listing-form__group relative">
         <label>Price <span>*</span></label>
-        <input type="text" placeholder="AED 15,000,000">
-        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+        <input type="text"  value="AED 15,000,000" readonly>
       </div>
   
       <div class="listing-form__group relative">
         <label>Per sift <span>*</span></label>
-        <input type="text" placeholder="AED 2,000">
-        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+        <input type="text"  value="AED 2,000" readonly>
       </div>
   
       <div class="listing-form__group relative">
         <label>Occupancy<span>*</span>*</label>
-        <input type="text" placeholder="Tenanted">
-        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+        <input type="text"  value="Tenanted" readonly>
       </div>
   
       <div class="listing-form__group relative">
         <label>Fit-out <span>*</span></label>
-        <input type="text" placeholder="Fitted">
-        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+        <input type="text"  value="Fitted" readonly>
       </div>
   
       <div class="listing-form__group relative">
         <label>Contact <span>*</span></label>
-        <input type="text" placeholder="Jackson">
-        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+        <input type="text"  value="Jackson" readonly>
       </div>
   
       <div class="listing-form__group relative">
         <label>Listing Status <span>*</span></label>
-        <input type="text" placeholder="Pocket">
-        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+        <input type="text"  value="Pocket" readonly>
       </div>
 
       <div class="listing-form__group relative">
         <label>Listing Source <span>*</span></label>
-        <input type="text" placeholder="Saad">
-        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+        <input type="text"  value="Saad" readonly>
       </div>
       
       <div class="listing-form__group relative">
         <label>Pictures</label>
-        <input type="text" placeholder="PDF">
-        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+        <input type="text" value="PDF" readonly>
       </div>
   
       <div class="listing-form__group">
@@ -106,12 +94,17 @@
     </div>
   </div>
 
-  <div class="popup fixed-center text-center">
+  <div class="popup hide fixed-center text-center">
     <div class="popup__content">
-      <img src="assets/green-tick.svg" alt="Tick Mark">
-      <h2>Listing added</h2>
-      <p>You have successfully added a new listing</p>
-      <button class="button popup__button button__primary">Ok</button>
+      <img src="assets/delete-icon.svg" alt="Tick Mark">
+      <h2>Delete unit</h2>
+      <span>Unit A101</span>
+      <p>Are you sure you want to delete this unit permanently from the listings?</p>
+      
+      <div class="popup__button-container">
+        <button class="button popup__button button__transparent">No</button>
+        <button class="button popup__button button__primary">Yes</button>
+      </div>
     </div>
   </div>  
 </body>

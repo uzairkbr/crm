@@ -1,5 +1,14 @@
+h2, .h2 {
+  font-size: 32px;
+}
+
+
 h5, .h5 {
   font-size: 24px;
-  font-weight: 500;
+}
+
+h2, h5,
+.h2, .h5 {
   line-height: 1.5;
+  font-weight: 500;
 }
