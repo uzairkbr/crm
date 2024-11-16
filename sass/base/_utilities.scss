@@ -10,8 +10,11 @@
   transform: translate(-50%, -50%);
 }
 
+.hide { display: none; }
+.show { display: block; }
+.pointer { cursor: pointer; }
 .absolute { position: absolute; }
 .relative { position: relative; }
-.show { display: block; }
-.hide { display: none; }
 .text-center { text-align: center; }
+.justify-end { justify-content: flex-end; }
+.justify-start { justify-content: flex-start; }

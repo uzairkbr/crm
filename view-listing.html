@@ -8,7 +8,23 @@
 </head>
 <body>
 
-  <div class="form-container fixed-center">
+  <div class="background-overlay hide"></div>
+
+  <div class="popup hide fixed-center text-center">
+    <div class="popup__content">
+      <img src="assets/delete.svg" alt="Tick Mark">
+      <h2>Delete unit</h2>
+      <span>Unit A101</span>
+      <p>Are you sure you want to delete this unit permanently from the listings?</p>
+      
+      <div class="popup__button-container">
+        <button class="button popup__button button__transparent">No</button>
+        <button class="button popup__button button__primary">Yes</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="view-listing" class="form-container fixed-center">
     <div class="form-container__header">
       <h5>Listing Details (Aspect-A101)</h5>
       <button><img src="assets/cross-without-border.svg" alt="Cross Icon"></button>
@@ -16,57 +32,57 @@
     
     <form class="listing-form">
       <div class="listing-form__group relative">
-        <label>Community <span>*</span></label>
+        <label>Community </label>
         <input type="text"  value="Business Bay" readonly>
       </div>
   
       <div class="listing-form__group relative">
-        <label>Tower <span>*</span></label>
+        <label>Tower </label>
         <input type="text"  value="Aspect Tower" readonly>
       </div>
   
       <div class="listing-form__group relative">
-        <label>Unit no. <span>*</span></label>
+        <label>Unit no. </label>
         <input type="text"  value="A101" readonly>
       </div>
   
       <div class="listing-form__group relative">
-        <label>Size (sqft) <span>*</span></label>
+        <label>Size (sqft) </label>
         <input type="text"  value="2100" readonly>
       </div>
   
       <div class="listing-form__group relative">
-        <label>Price <span>*</span></label>
+        <label>Price </label>
         <input type="text"  value="AED 15,000,000" readonly>
       </div>
   
       <div class="listing-form__group relative">
-        <label>Per sift <span>*</span></label>
+        <label>Per sift </label>
         <input type="text"  value="AED 2,000" readonly>
       </div>
   
       <div class="listing-form__group relative">
-        <label>Occupancy<span>*</span>*</label>
+        <label>Occupancy*</label>
         <input type="text"  value="Tenanted" readonly>
       </div>
   
       <div class="listing-form__group relative">
-        <label>Fit-out <span>*</span></label>
+        <label>Fit-out </label>
         <input type="text"  value="Fitted" readonly>
       </div>
   
       <div class="listing-form__group relative">
-        <label>Contact <span>*</span></label>
+        <label>Contact </label>
         <input type="text"  value="Jackson" readonly>
       </div>
   
       <div class="listing-form__group relative">
-        <label>Listing Status <span>*</span></label>
+        <label>Listing Status </label>
         <input type="text"  value="Pocket" readonly>
       </div>
 
       <div class="listing-form__group relative">
-        <label>Listing Source <span>*</span></label>
+        <label>Listing Source </label>
         <input type="text"  value="Saad" readonly>
       </div>
       
@@ -86,26 +102,183 @@
       </div>
     </form>
 
-    <div class="form-container__submit-btn">
-      <button type="button">
-        <img src="assets/plus-icon.svg" alt="">
-       <span>Add</span>
+    <div class="form-container__submit-btn justify-start">
+      <button id="btn-edit" class="button__light-blue">
+        <img src="assets/edit-icon.svg" alt="edit icon">
+        <span>Edit</span>
+      </button>
+
+      <button id="btn-danger" class="button__danger">
+        <img src="assets/delete-icon.svg" alt="">
+       <span>Delete</span>
       </button>
     </div>
   </div>
 
-  <div class="popup hide fixed-center text-center">
-    <div class="popup__content">
-      <img src="assets/delete-icon.svg" alt="Tick Mark">
-      <h2>Delete unit</h2>
-      <span>Unit A101</span>
-      <p>Are you sure you want to delete this unit permanently from the listings?</p>
-      
-      <div class="popup__button-container">
-        <button class="button popup__button button__transparent">No</button>
-        <button class="button popup__button button__primary">Yes</button>
+  <div id="edit-listing" class="form-container hide fixed-center">
+    <div class="form-container__header">
+      <div>
+        <img src="assets/arrow-left.svg" alt="arrow left" class="pointer">
+        <h5>Listing Details (Aspect-A101)</h5>
       </div>
+      <button><img src="assets/cross-without-border.svg" alt="Cross Icon"></button>
     </div>
-  </div>  
+    
+    <form class="listing-form">
+      <div class="listing-form__group relative">
+        <label>Community <span>*</span></label>
+        <input type="text" placeholder="Business Bay">
+        <img src="assets/arrow-down.svg" alt="arrow down" class="absolute arrow-down">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Tower <span>*</span></label>
+        <input type="text" placeholder="Aspect Tower">
+        <img src="assets/arrow-down.svg" alt="arrow down" class="absolute arrow-down">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Unit no. <span>*</span></label>
+        <input type="text" placeholder="A101">
+        <img src="assets/arrow-down.svg" alt="arrow down" class="absolute arrow-down">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Size (sqft) <span>*</span></label>
+        <input type="text" placeholder="2100">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Price <span>*</span></label>
+        <input type="text" placeholder="AED 15,000,000">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Per sift <span>*</span></label>
+        <input type="text" placeholder="AED 2,000">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Occupancy<span>*</span>*</label>
+        <input type="text" placeholder="Tenanted">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Fit-out <span>*</span></label>
+        <input type="text" placeholder="Fitted">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Contact <span>*</span></label>
+        <input type="text" placeholder="Jackson">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Listing Status <span>*</span></label>
+        <input type="text" placeholder="Pocket">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+
+      <div class="listing-form__group relative">
+        <label>Listing Source <span>*</span></label>
+        <input type="text" placeholder="Saad">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+      
+      <div class="listing-form__group relative">
+        <label>Pictures</label>
+        <input type="text" placeholder="PDF">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+  
+      <div class="listing-form__group">
+        <label>Notes</label>
+        <textarea placeholder="Listed with 3 companies" rows="8" cols="50"></textarea>
+      </div>
+  
+      <div class="listing-form__group">
+        <label>Comments</label>
+        <textarea placeholder="Need to visit the office" rows="8" cols="50"></textarea>
+      </div>
+    </form>
+
+    <div class="form-container__submit-btn justify-end">
+      <button class="button__primary">
+        <img src="assets/save-icon.svg" alt="">
+        <span>Save</span>
+      </button>
+    </div>
+  </div>
+  
+
+  <script>
+    const popup = document.querySelector('.popup');
+    const overlay = document.querySelector('.background-overlay');
+    const deleteBtn = document.getElementById('btn-danger');
+    const editBtn = document.getElementById('btn-edit');
+    const editListing = document.getElementById('edit-listing');
+    const viewListing = document.getElementById('view-listing');
+    const backIcon = document.querySelector('#edit-listing .pointer');
+
+    overlay.addEventListener('click', () => {
+      popup.classList.add('hide');
+      editListing.classList.add('hide');
+      viewListing.classList.add('hide');
+      overlay.classList.add('hide');
+    });
+
+    document.addEventListener('click', (e) => {
+      const isClickInsidePopup = popup.contains(e.target) && !popup.classList.contains('hide');
+      const isClickInsideEditListing = editListing.contains(e.target) && !editListing.classList.contains('hide');
+      const isClickInsideViewListing = viewListing.contains(e.target) && !viewListing.classList.contains('hide');
+      const isClickOnEditBtn = editBtn.contains(e.target); 
+      const isClickOnDeleteBtn = deleteBtn.contains(e.target);
+      const isClickonBackIcon = backIcon.contains(e.target);
+
+      if (
+        !isClickInsidePopup &&
+        !isClickInsideEditListing &&
+        !isClickInsideViewListing &&
+        !isClickOnEditBtn && 
+        !isClickOnDeleteBtn &&
+        !isClickonBackIcon
+      ) {
+        popup.classList.add('hide');
+        editListing.classList.add('hide');
+        viewListing.classList.add('hide');
+        overlay.classList.add('hide');
+      }
+    });
+
+    deleteBtn.addEventListener('click', () => {
+      popup.classList.remove('hide');
+      overlay.classList.remove('hide');
+      editListing.classList.add('hide');
+      viewListing.classList.add('hide');
+    });
+
+    editBtn.addEventListener('click', (e) => {
+      e.stopPropagation(); 
+      popup.classList.add('hide');
+      viewListing.classList.add('hide'); 
+      overlay.classList.remove('hide');
+      editListing.classList.remove('hide'); 
+      editListing.style.zIndex = 1000;
+    });
+
+    backIcon.addEventListener('click', () => {
+      editListing.classList.add('hide'); 
+      viewListing.classList.remove('hide');
+      overlay.classList.add('hide'); 
+    });
+
+  </script>
+
 </body>
 </html>

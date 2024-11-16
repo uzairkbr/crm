@@ -1,3 +1,4 @@
+button,
 .button {
   color: #fff;
   font-size: 16px;
@@ -13,5 +14,13 @@
     background-color: transparent;
     border: 2px solid var(--color-primary);
     color: var(--color-primary);
+  }
+
+  &__danger {
+    background-color: var(--color-danger);
+  }
+
+  &__light-blue {
+    background-color: var(--color-light-blue);
   }
 }

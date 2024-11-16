@@ -8,7 +8,18 @@
 </head>
 <body>
 
-  <div class="form-container fixed-center">
+  <div class="background-overlay hide"></div>
+
+  <div class="popup hide fixed-center text-center">
+    <div class="popup__content">
+      <img src="assets/green-tick.svg" alt="Tick Mark">
+      <h2>Listing added</h2>
+      <p>You have successfully added a new listing</p>
+      <button class="button popup__button button__primary">Ok</button>
+    </div>
+  </div>  
+
+  <div id="add-list" class="form-container fixed-center">
     <div class="form-container__header">
       <h5>Add new listing</h5>
       <button><img src="assets/cross-without-border.svg" alt="Cross Icon"></button>
@@ -98,21 +109,29 @@
       </div>
     </form>
 
-    <div class="form-container__submit-btn">
-      <button type="button">
+    <div class="form-container__submit-btn justify-end">
+      <button class="button__primary">
         <img src="assets/plus-icon.svg" alt="">
        <span>Add</span>
       </button>
     </div>
   </div>
 
-  <div class="popup fixed-center text-center">
-    <div class="popup__content">
-      <img src="assets/green-tick.svg" alt="Tick Mark">
-      <h2>Listing added</h2>
-      <p>You have successfully added a new listing</p>
-      <button class="button popup__button button__primary">Ok</button>
-    </div>
-  </div>  
+
+  <script>
+    const popup = document.querySelector('.popup');
+    const addList = document.getElementById('add-list');
+    const addButton = addList.querySelector('.form-container__submit-btn button');
+    const bgOverlay = document.querySelector('.background-overlay');
+
+    addButton.addEventListener('click', () => {
+      popup.classList.remove('hide');
+    });
+
+    bgOverlay.addEventListener('click', () => {
+      popup.classList.add('hide');
+    });
+
+  </script>
 </body>
 </html>

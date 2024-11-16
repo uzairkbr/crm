@@ -3,6 +3,7 @@
   --container-lg: 1920px;
   --container-md: 1150px;
   --color-primary: #4F46E5;
+  --color-light-blue: #3878D7;
   --color-danger: #CC0000;
   --color-dark: #2E3338;
   --color-border: #D8DBDF;
@@ -26,6 +27,18 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
 .absolute {
   position: absolute;
 }
@@ -34,16 +47,16 @@ body {
   position: relative;
 }
 
-.show {
-  display: block;
-}
-
-.hide {
-  display: none;
-}
-
 .text-center {
   text-align: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
 }
 
 h2, .h2 {
@@ -95,6 +108,10 @@ button {
   padding-bottom: 10px;
   border-bottom: 1px solid var(--color-border);
 }
+.form-container__header > div {
+  display: flex;
+  gap: 20px;
+}
 .form-container__header h5 {
   margin: 0;
 }
@@ -110,7 +127,6 @@ button {
   margin-block: 24px;
   border-radius: 12px;
   background-color: #F9FAFA;
-  border-bottom: 1px solid var(--color-border);
 }
 .form-container .listing-form__group {
   display: flex;
@@ -157,18 +173,15 @@ button {
   resize: none;
 }
 .form-container__submit-btn {
-  grid-column: span 2;
   display: flex;
-  justify-content: flex-end;
   padding-top: 24px;
+  gap: 12px;
   border-top: 1px solid var(--color-border);
 }
 .form-container__submit-btn button {
-  background-color: var(--color-primary);
   border-radius: 100px;
   color: #fff;
   padding: 12px 20px;
-  font-size: 16px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -220,6 +233,7 @@ button {
   padding-block: 11px;
 }
 
+button,
 .button {
   color: #fff;
   font-size: 16px;
@@ -227,13 +241,39 @@ button {
   padding-block: 11px;
   transition: 0.3s;
 }
+button__primary,
 .button__primary {
   background-color: var(--color-primary);
 }
+button__transparent,
 .button__transparent {
   background-color: transparent;
   border: 2px solid var(--color-primary);
   color: var(--color-primary);
+}
+button__danger,
+.button__danger {
+  background-color: var(--color-danger);
+}
+button__light-blue,
+.button__light-blue {
+  background-color: var(--color-light-blue);
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.popup:not(.hide) ~ div {
+  filter: blur(8px);
+  pointer-events: none;
 }
 
 body {

@@ -13,6 +13,11 @@
     padding-bottom: 10px;
     border-bottom: 1px solid var(--color-border);
 
+    > div {
+      display: flex;
+      gap: 20px;
+    }
+
     h5 {
       margin: 0;
     }
@@ -31,7 +36,6 @@
     margin-block: 24px;
     border-radius: 12px;
     background-color: #F9FAFA;
-    border-bottom: 1px solid var(--color-border);
 
     &__group {
       display: flex;
@@ -86,18 +90,15 @@
   }
   
   &__submit-btn {
-    grid-column: span 2;
     display: flex;
-    justify-content: flex-end;
     padding-top: 24px;
+    gap: 12px;
     border-top: 1px solid var(--color-border);
 
     button {
-      background-color: var(--color-primary);
       border-radius: 100px;
       color: #fff;
       padding: 12px 20px;
-      font-size: 16px;
       display: flex;
       align-items: center;
       gap: 12px;
