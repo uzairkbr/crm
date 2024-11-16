@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Unit Details</title>
+</head>
+<body>
+  
+  <div class="background-overlay hide"></div>
+
+  <div id="delete-popup" class="popup hide fixed-center text-center">
+    <div class="popup__content">
+      <img src="assets/delete.svg" alt="Tick Mark">
+      <h2>Delete unit</h2>
+      <span>Unit A101</span>
+      <p>Are you sure you want to delete this unit permanently from the market research database?</p>
+      
+      <div class="popup__button-container">
+        <button class="button popup__button button__transparent">No</button>
+        <button class="button popup__button button__primary">Yes</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="view-listing" class="form-container fixed-center">
+    <div class="form-container__header">
+      <div>
+        <h5>(Aspect-A101)</h5>
+      </div>
+      <button><img src="assets/cross-without-border.svg" alt="Cross Icon"></button>
+    </div>
+    
+    <form class="listing-form">
+      <div class="listing-form__group relative">
+        <label>Community </label>
+        <input type="text"  value="Business Bay" readonly>
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Tower </label>
+        <input type="text"  value="Aspect Tower" readonly>
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Unit no. </label>
+        <input type="text"  value="A101" readonly>
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Year</label>
+        <input type="text"  value="2024" readonly>
+      </div>
+
+      <div class="listing-form__group relative">
+        <label>Size (sqft) </label>
+        <input type="text"  value="1000" readonly>
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Owner Name</label>
+        <input type="text"  value="Mohamed Nasry" readonly>
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Owner No</label>
+        <input type="text"  value="+971501234567" readonly>
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Owner Email</label>
+        <input type="text"  value="user@email.com" readonly>
+      </div>
+    </form>
+
+    <div class="form-container__submit-btn justify-start">
+      <button id="btn-edit" class="button__light-blue">
+        <img src="assets/edit-icon.svg" alt="edit icon">
+        <span>Edit</span>
+      </button>
+
+      <button id="btn-danger" class="button__danger">
+        <img src="assets/delete-icon.svg" alt="">
+       <span>Delete</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="edit-listing" class="form-container hide fixed-center">
+    <div class="form-container__header">
+      <div>
+        <img src="assets/arrow-left.svg" alt="arrow left" class="pointer">
+        <h5>(Aspect-A101)</h5>
+      </div>
+      <button><img src="assets/cross-without-border.svg" alt="Cross Icon"></button>
+    </div>
+    
+    <form class="listing-form">
+      <div class="listing-form__group relative">
+        <label>Community <span>*</span></label>
+        <input type="text" placeholder="Business Bay">
+        <img src="assets/arrow-down.svg" alt="arrow down" class="absolute arrow-down">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Tower <span>*</span></label>
+        <input type="text" placeholder="Aspect Tower">
+        <img src="assets/arrow-down.svg" alt="arrow down" class="absolute arrow-down">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Unit no. <span>*</span></label>
+        <input type="text" placeholder="A101">
+        <img src="assets/arrow-down.svg" alt="arrow down" class="absolute arrow-down">
+      </div>
+
+      <div class="listing-form__group relative">
+        <label>Year <span>*</span></label>
+        <input type="text" placeholder="2024">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Size (sqft) <span>*</span></label>
+        <input type="text" placeholder="1000">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+
+      <div class="listing-form__group relative">
+        <label>Owner Name <span>*</span></label>
+        <input type="text" placeholder="Mohamed Nasry">
+        <img src="assets/arrow-down.svg" alt="arrow down" class="absolute arrow-down">
+      </div>
+      
+      <div class="listing-form__group relative">
+        <label>Owner No<span>*</span>*</label>
+        <input type="text" placeholder="+971501234567">
+        <img src="assets/arrow-down.svg" alt="arrow down" class="absolute arrow-down">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Owner Email <span>*</span></label>
+        <input type="text" placeholder="user@email.com">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+    </form>
+
+    <div class="form-container__submit-btn justify-end">
+      <button class="button__primary">
+        <img src="assets/save-icon.svg" alt="">
+        <span>Save</span>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const editBtn = document.getElementById('btn-edit');
+    const deleteBtn = document.getElementById('btn-danger');
+    const viewListing = document.getElementById('view-listing');
+    const editListing = document.getElementById('edit-listing');
+    const deletePopup = document.getElementById('delete-popup');
+    const bgOverlay = document.querySelector('.background-overlay');
+    const backIcon = document.querySelector('#edit-listing .pointer');
+
+    editBtn.addEventListener('click', () => {
+      viewListing.classList.add('hide');
+      bgOverlay.classList.remove('hide');
+      editListing.classList.remove('hide');
+      editListing.style.zIndex = 99;
+    });
+
+    deleteBtn.addEventListener('click', () => {
+      viewListing.classList.add('hide');
+      bgOverlay.classList.remove('hide');
+      deletePopup.classList.remove('hide');
+    });
+
+    bgOverlay.addEventListener('click', () => {
+      viewListing.classList.add('hide');
+      bgOverlay.classList.add('hide');
+      editListing.classList.add('hide');
+      deletePopup.classList.add('hide');
+    });
+
+
+    backIcon.addEventListener('click', () => {
+      viewListing.classList.remove('hide');
+      bgOverlay.classList.add('hide');
+      editListing.classList.add('hide');
+    });
+
+
+  </script>
+
+</body>
+</html>
