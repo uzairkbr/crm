@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Database</title>
+</head>
+<body>
+  
+  <div class="background-overlay hide"></div>
+
+  <div id="delete-popup" class="popup hide fixed-center text-center">
+    <div class="popup__content">
+      <img src="assets/delete.svg" alt="Tick Mark">
+      <h2>Delete unit</h2>
+      <span>Unit A101</span>
+      <p>Are you sure you want to delete this unit permanently from the market research database?</p>
+      
+      <div class="popup__button-container">
+        <button class="button popup__button button__transparent">No</button>
+        <button class="button popup__button button__primary">Yes</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="edit-listing" class="form-container fixed-center">
+    <div class="form-container__header">
+      <div>
+        <h5>(Aspect-A101)</h5>
+      </div>
+      <button><img src="assets/cross-without-border.svg" alt="Cross Icon"></button>
+    </div>
+    
+    <form class="listing-form">
+      <div class="listing-form__group relative">
+        <label>Community <span>*</span></label>
+        <input type="text" placeholder="Business Bay">
+        <img src="assets/arrow-down.svg" alt="arrow down" class="absolute arrow-down">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Tower <span>*</span></label>
+        <input type="text" placeholder="Aspect Tower">
+        <img src="assets/arrow-down.svg" alt="arrow down" class="absolute arrow-down">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Unit no. <span>*</span></label>
+        <input type="text" placeholder="A101">
+        <img src="assets/arrow-down.svg" alt="arrow down" class="absolute arrow-down">
+      </div>
+      
+      <div class="listing-form__group relative">
+        <label>Year <span>*</span></label>
+        <input type="text" placeholder="2024">
+        <img src="assets/arrow-down.svg" alt="arrow down" class="absolute arrow-down">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Size (sqft) <span>*</span></label>
+        <input type="text" placeholder="1000">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+
+      <div class="listing-form__group relative">
+        <label>Owner Name <span>*</span></label>
+        <input type="text" placeholder="Mohamed Nasry">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+      
+      <div class="listing-form__group relative">
+        <label>Owner No<span>*</span>*</label>
+        <input type="text" placeholder="+971501234567">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Owner Email <span>*</span></label>
+        <input type="text" placeholder="user@email.com">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+    </form>
+
+    <div class="form-container__submit-btn justify-end">
+      <button class="button__primary">
+        <img src="assets/save-icon.svg" alt="">
+        <span>Save</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="owner-details">
+    
+  </div>
+
+</body>
+</html>
