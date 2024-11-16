@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "sass": "^1.81.0"
+  },
+  "scripts": {
+    "watch": "sass --watch sass:css --no-source-map",
+    "compile:css": "sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix"
+  }
+}

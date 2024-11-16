@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --container-lg: 1920px;
+  --container-md: 1150px;
+  --color-primary: #4F46E5;
+  --color-danger: #CC0000;
+  --color-dark: #2E3338;
+  --color-border: #D8DBDF;
+}
+
+body {
+  font-family: "Poppins", serif;
+  color: var(--color-dark);
+}
+
+.container-lg {
+  max-width: var(--container-lg);
+  margin-inline: auto;
+}
+
+.fixed-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+h5, .h5 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  border: none;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+.form-container {
+  border-radius: 8px;
+  padding: 20px;
+  max-width: var(--container-md);
+  width: 100%;
+  margin-inline: auto;
+  background-color: #fff;
+}
+.form-container__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+.form-container__header h5 {
+  margin: 0;
+}
+.form-container__header .button {
+  width: 18px;
+  height: 18px;
+}
+.form-container .listing-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 16px;
+  margin-block: 24px;
+  border-radius: 12px;
+  background-color: #F9FAFA;
+  border-bottom: 1px solid var(--color-border);
+}
+.form-container .listing-form__group {
+  display: flex;
+  flex-direction: column;
+}
+.form-container .listing-form__group label {
+  font-size: 12px;
+  margin: 0 0 2px 16px;
+  color: black;
+}
+.form-container .listing-form__group label span {
+  color: var(--color-danger);
+}
+.form-container .listing-form__group img {
+  width: 24px;
+  height: 24px;
+  right: 12px;
+  top: 33px;
+  cursor: pointer;
+}
+.form-container .listing-form__group .arrow-down {
+  width: 12px;
+  height: 12px;
+  top: 40px;
+  right: 16px;
+  transition: 0.3s;
+}
+.form-container .listing-form__group input,
+.form-container .listing-form__group textarea {
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 1em;
+}
+.form-container .listing-form__group input::placeholder,
+.form-container .listing-form__group textarea::placeholder {
+  opacity: 0.5;
+}
+.form-container .listing-form__group input:focus ~ .arrow-down,
+.form-container .listing-form__group textarea:focus ~ .arrow-down {
+  rotate: -180deg;
+}
+.form-container .listing-form__group textarea {
+  resize: none;
+}
+.form-container__submit-btn {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+.form-container__submit-btn button {
+  background-color: var(--color-primary);
+  border-radius: 100px;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+body {
+  background-color: black;
+}

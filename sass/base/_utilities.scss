@@ -1,0 +1,14 @@
+.container-lg {
+  max-width: var(--container-lg);
+  margin-inline: auto;
+}
+
+.fixed-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.absolute { position: absolute; }
+.relative { position: relative; }
