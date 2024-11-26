@@ -1,0 +1,56 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 22px;
+  background-color: var(--color-soft-grey);
+  border-bottom: 1px solid var(--color-border);
+
+  &__brand {
+    padding-inline: 100px;
+  }
+
+  &__search-bar {
+    gap: 24px;
+    cursor: pointer;
+
+    input {
+      border: 1px solid var(--color-border);
+      padding: 8px 16px;
+      border-radius: 8px;
+      opacity: 0;
+      cursor: default;
+      transition: 0.3s;
+
+      &.active {
+        cursor: text;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__items {
+    padding-inline: 24px;
+    gap: 24px;
+  }
+
+  &__notifications {
+    span {
+      top: -2px;
+      right: -2px;
+      width: 16px;
+      padding: 5px;
+      height: 16px;
+      font-size: 10px;
+      border-radius: 100px;
+      color: var(--color-white);
+      background-color: var(--color-primary);
+    }
+  }
+
+  &__profile {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+}

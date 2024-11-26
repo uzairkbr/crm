@@ -27,4 +27,10 @@ button,
   &__slate-blue {
     background-color: var(--color-slate-blue);
   }
+
+  &__primary-transparent {
+    background-color: var(--color-light-grey);
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+  }
 }
