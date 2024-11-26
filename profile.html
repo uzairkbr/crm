@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Profile</title>
+</head>
+<body>
+
+  <div class="profile">
+
+    <div class="popup hide fixed-center text-center">
+      <div class="popup__content">
+        <img src="assets/green-tick.svg" alt="Tick Mark">
+        <h2>Password Changed</h2>
+        <p>You have successfully changed your password</p>
+        <button class="button popup__button button__primary">Ok</button>
+      </div>
+    </div> 
+  
+    <div id="edit-profile" class="form-container container-md fixed-center">
+      <div class="form-container__header">
+        <h5>Edit Profile</h5>
+        <button><img src="assets/cross-without-border.svg" alt="Cross Icon"></button>
+      </div>
+
+      <div class="profile-picture relative">
+        <img src="assets/user.png" alt="Profile Picture" class="profile-picture__image">
+        <div class="profile-picture__overlay absolute">
+          <img src="assets/camera.svg" alt="camera icon">
+        </div>
+      </div>
+      
+      <form class="listing-form">
+        <div class="listing-form__group relative">
+          <label>First Name <span>*</span></label>
+          <input type="text" placeholder="first name" value="Umar">
+          <img src="assets/cross-icon.svg" alt="arrow down" class="absolute ">
+        </div>
+    
+        <div class="listing-form__group relative">
+          <label>Last name <span>*</span></label>
+          <input type="text" placeholder="last name" value="Iqbal">
+          <img src="assets/cross-icon.svg" alt="arrow down" class="absolute">
+        </div>
+    
+        <div class="listing-form__group relative">
+          <label>Email address <span>*</span></label>
+          <input type="text" placeholder="example@gmail.com" value="umar.iqbal@gmail.com">
+          <img src="assets/cross-icon.svg" alt="arrow down" class="absolute">
+        </div>
+    
+        <div class="listing-form__group relative">
+          <label>Contact Number<span>*</span></label>
+          <input type="text" placeholder="+971-50-1234567" value="+971-50-1234567">
+          <img src="assets/cross-icon.svg" alt="arrow down" class="absolute">
+        </div>
+    
+        <div class="listing-form__group relative">
+          <label>Country <span>*</span></label>
+          <input type="text" placeholder="country name" value="United Arab Emirates">
+          <img src="assets/cross-icon.svg" alt="arrow down" class="absolute">
+        </div>
+    
+        <div class="listing-form__group relative">
+          <label>City/State <span>*</span></label>
+          <input type="text" placeholder="city" value="Dubai">
+          <img src="assets/cross-icon.svg" alt="arrow down" class="absolute">
+        </div>
+    
+        <div class="listing-form__group relative">
+          <label>Company<span>*</span>*</label>
+          <input type="text" placeholder="Company name" value="Universal Real Estate Brokers LLC">
+          <img src="assets/cross-icon.svg" alt="arrow down" class="absolute">
+        </div>
+    
+        <div class="listing-form__group relative">
+          <label>Designation <span>*</span></label>
+          <input type="text" placeholder="Designation" value="Senior Sales Agent">
+          <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+        </div>
+
+        <div class="listing-form__group grid-col-2">
+          <label>Comments</label>
+          <textarea placeholder="Need to visit the office" rows="8" cols="50">As a Senior Sales Agent with over 10 years of experience in driving business growth, my passion lies in building strong client relationships and delivering tailored solutions that meet customer needs. I’ve honed my ability to understand diverse markets, anticipate trends, and strategically position products and services to maximize revenue.
+
+  Throughout my career, I’ve excelled in developing sales strategies that not only meet but exceed targets. My expertise spans across negotiation, closing high-value deals.
+          </textarea>
+        </div>
+      </form>
+
+      <div class="form-container__submit-btn justify-end">
+        <button class="button__primary">
+          <img src="assets/save-icon.svg" alt="">
+          <span>Save</span>
+        </button>
+      </div>
+    </div>
+
+
+    <div class="reset-password hide form-container fixed-center">
+
+      <div class="form-container__header">
+        <h5>Change your password</h5>
+        <button><img src="assets/cross-without-border.svg" alt="Cross Icon"></button>
+      </div>
+
+      <form class="listing-form">
+        <div class="listing-form__group relative">
+          <label>Current Password <span>*</span></label>
+          <input type="text" value="user@12345">
+        </div>
+    
+        <div class="listing-form__group relative">
+          <label>New Password <span>*</span></label>
+          <input type="password" id="password" placeholder="********" value="abcde12345*">
+          <img src="assets/eye-icon.svg" alt="arrow down" class="absolute eye-icon">
+          <small>Min. 8 characters with 1 special letter</small>
+        </div>
+    
+        <div class="listing-form__group relative">
+          <label>Confirm Password<span>*</span></label>
+          <input type="password" id="confirm-password" value="abcde12345*">
+          <img src="assets/eye-icon.svg" alt="arrow down" class="absolute eye-icon">
+          <small>Password must be same</small>
+        </div>
+      </form>
+
+      <div class="form-container__submit-btn justify-end">
+        <button class="button__primary save-button">
+          <img src="assets/save-icon.svg" alt="">
+          <span>Save</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script>
+    const toggleBtn = document.querySelectorAll('.eye-icon');
+    const saveBtn = document.querySelector(".save-button");
+
+    toggleBtn.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const input = btn.previousElementSibling;
+        if (input.type === 'password') {
+          input.type = 'text';
+          btn.setAttribute("src", "assets/eye-w-slash.svg");
+        } else {
+          input.type = 'password';
+          btn.setAttribute("src", "assets/eye-icon.svg");
+        }
+      });
+    });
+
+    saveBtn.addEventListener("click", function() {
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirm-password").value;
+
+      document.querySelector(".reset-password").classList.add("hide");
+      document.querySelector(".popup").classList.remove("hide");
+    })
+  </script>
+</body>
+</html>

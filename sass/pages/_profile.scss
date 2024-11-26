@@ -1,0 +1,20 @@
+.profile {
+
+  .form-container {
+    max-width: var(--container-md);
+  }
+
+  .reset-password {
+    max-width: 609px;
+    width: 100%;
+    padding: 24px;
+
+    .listing-form {
+      grid-template-columns: 1fr;
+
+      label {
+        color: var(--color-charcoal-grey) !important;
+      }
+    }
+  }
+}

@@ -8,7 +8,7 @@
 </head>
 <body>
   
-  <div class="background-overlay hide"></div>
+  <div class="background-overlay "></div>
 
   <div id="delete-popup" class="popup hide fixed-center text-center">
     <div class="popup__content">
@@ -24,7 +24,7 @@
     </div>
   </div>
 
-  <div id="edit-listing" class="form-container fixed-center">
+  <div id="edit-listing" class="form-container hide fixed-center">
     <div class="form-container__header">
       <div>
         <h5>(Aspect-A101)</h5>
@@ -90,9 +90,290 @@
     </div>
   </div>
 
-  <div class="owner-details">
+  <div id="owner-details" class="details form-container hide fixed-center">
+    <div class="details__header bg-slate-blue">
+      <h6>Owner Details</h6>
+      <button><img src="assets/cross-without-border-white.svg" alt="Cross Icon"></button>
+    </div>
+
+    <form class="listing-form">    
+      <div class="listing-form__group relative">
+        <label>Year</label>
+        <input type="text" placeholder="2022">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Name</label>
+        <input type="text" placeholder="username">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+
+      <div class="listing-form__group relative">
+        <label>Contact</label>
+        <input type="text" placeholder="+971507654321">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+
+      <div class="listing-form__group relative">
+        <label>Email</label>
+        <input type="text" placeholder="user@gmail.com">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+
+    </form>
     
+    <button class="button add-button bg-slate-blue">
+      <img src="assets/plus-icon.svg" alt="">
+    </button>
+
+    <div class="form-container__submit-btn justify-end">
+      <button class="button__primary">
+        <img src="assets/save-icon.svg" alt="">
+        <span>Save</span>
+      </button>
+    </div>
   </div>
 
+  <div id="listing-status" class="details form-container fixed-center">
+    <div class="details__header bg-olive-green">
+      <h6>Listings Status</h6>
+      <button><img src="assets/cross-without-border-white.svg" alt="Cross Icon"></button>
+    </div>
+
+    <form class="listing-form">
+      <div class="listing-form__group relative">
+        <label>Listing Source</label>
+        <input type="text" placeholder="My Listing">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Listing With</label>
+        <input type="text" placeholder="No Information">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+
+      <div class="listing-form__group grid-col-2">
+        <textarea placeholder="Any information regarding the unit owner or tenant..." rows="5" cols="50"></textarea>
+      </div>
+    </form>
+    
+    <button class="button add-button bg-olive-green">
+      <img src="assets/plus-icon.svg" alt="">
+    </button>
+
+    <div class="form-container__submit-btn justify-end">
+      <button class="button__primary">
+        <img src="assets/save-icon.svg" alt="">
+        <span>Save</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="transaction" class="details form-container hide fixed-center">
+    <div class="details__header bg-slate-blue-grey">
+      <h6>Transactions</h6>
+      <button><img src="assets/cross-without-border-white.svg" alt="Cross Icon"></button>
+    </div>
+
+    <form class="listing-form">    
+      <div class="listing-form__group relative">
+        <label>Listing Source</label>
+        <input type="text" placeholder="My Listing">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Listing With</label>
+        <input type="text" placeholder="No Information">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+    </form>
+    
+    <button class="button add-button bg-slate-blue-grey">
+      <img src="assets/plus-icon.svg" alt="">
+    </button>
+
+    <div class="form-container__submit-btn justify-end">
+      <button class="button__primary">
+        <img src="assets/save-icon.svg" alt="">
+        <span>Save</span>
+      </button>
+    </div>
+  </div>
+  
+  <div id="tencent-info" class="details form-container hide fixed-center">
+    <div class="details__header bg-tawny-brown">
+      <h6>Tenant Info</h6>
+      <button><img src="assets/cross-without-border-white.svg" alt="Cross Icon"></button>
+    </div>
+
+    <form class="listing-form">    
+      <div class="listing-form__group relative">
+        <label>Company Name</label>
+        <input type="text" placeholder="ABC telecom">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Contact No</label>
+        <input type="text" placeholder="+97142312368">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+    </form>
+    
+    <button class="button add-button bg-tawny-brown">
+      <img src="assets/plus-icon.svg" alt="">
+    </button>
+
+    <div class="form-container__submit-btn justify-end">
+      <button class="button__primary">
+        <img src="assets/save-icon.svg" alt="">
+        <span>Save</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="person-of-content" class="details form-container hide fixed-center">
+    <div class="details__header bg-royal-purple">
+      <h6>Person of Content</h6>
+      <button><img src="assets/cross-without-border-white.svg" alt="Cross Icon"></button>
+    </div>
+
+    <form class="listing-form grid-3">    
+      <div class="listing-form__group relative">
+        <label>Name</label>
+        <input type="text" placeholder="Jack Oliver">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+  
+      <div class="listing-form__group relative">
+        <label>Contact relation</label>
+        <input type="text" placeholder="POA">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+
+      <div class="listing-form__group relative">
+        <label>Contact medium</label>
+        <input type="text" placeholder="Whatsapp">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+
+      <div class="listing-form__group dropdown">
+        <label>Contact Status</label>
+        <div class="listing-form__select relative">
+          <div class="selected-status">
+            <div class="bg-mint-green"></div>
+            <span>Positive</span>
+          </div>
+          <img src="assets/arrow-down.svg" alt="Arrow down" class="absolute dropdown__arrow">
+        </div>
+
+        <ul>
+          <li>
+            <div>
+              <input type="radio" name="status" id="positive">
+              <label>Positive</label>
+            </div>
+
+            <div class="color bg-mint-green"></div>
+          </li>
+          <li>
+            <div>
+              <input type="radio" name="status" id="negative">
+              <label>Negative</label>
+            </div>
+
+            <div class="color bg-peach-yellow"></div>
+          </li>
+          <li>
+            <div>
+              <input type="radio" name="status" id="neutral">
+              <label>Neutral</label>
+            </div>
+
+            <div class="color bg-light-grey"></div>
+          </li>
+        </ul>
+      </div>
+    </form>
+    
+    <button class="button add-button bg-royal-purple">
+      <img src="assets/plus-icon.svg" alt="">
+    </button>
+
+    <div class="form-container__submit-btn justify-end">
+      <button class="button__primary">
+        <img src="assets/save-icon.svg" alt="">
+        <span>Save</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="end-user" class="details form-container container-details hide fixed-center">
+    <div class="details__header bg-forest-green">
+      <h6>End-user</h6>
+      <button><img src="assets/cross-without-border-white.svg" alt="Cross Icon"></button>
+    </div>
+
+    <form class="listing-form">    
+      <div class="listing-form__group grid-col-2 relative">
+        <label>Property Status</label>
+        <input type="text" placeholder="Tenanted">
+        <img src="assets/cross-icon.svg" alt="cross icon" class="absolute">
+      </div>
+    </form>
+    
+    <button class="button add-button bg-forest-green">
+      <img src="assets/plus-icon.svg" alt="">
+    </button>
+
+    <div class="form-container__submit-btn justify-end">
+      <button class="button__primary">
+        <img src="assets/save-icon.svg" alt="">
+        <span>Save</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="edit-notes" class="details form-container container-details hide fixed-center">
+    <div class="details__header bg-rust-orange">
+      <h6>Notes</h6>
+      <button><img src="assets/cross-without-border-white.svg" alt="Cross Icon"></button>
+    </div>
+
+    <form class="listing-form">
+      <div class="listing-form__group grid-col-2">
+        <textarea placeholder="Any information regarding the unit owner or tenant..." rows="5" cols="50"></textarea>
+      </div>
+    </form>
+
+    <div class="form-container__submit-btn justify-end">
+      <button class="button__primary">
+        <img src="assets/save-icon.svg" alt="">
+        <span>Save</span>
+      </button>
+    </div>
+  </div>
+
+
+  <script>
+    const dropdown = document.querySelector('.dropdown .listing-form__select');
+    
+    dropdown.addEventListener('click', () => {
+      const ul = dropdown.parentElement.querySelector('ul');
+      const arrow = dropdown.querySelector('.dropdown__arrow');
+      ul.classList.toggle('active');
+      arrow.classList.toggle('rotate');
+
+      if (ul.classList.contains('active')) {
+        const height = ul.scrollHeight;
+        ul.style.height = `${height + 16}px`;
+      } else {
+        ul.style.height = 0;
+      }
+    });
+  </script>
 </body>
 </html>
