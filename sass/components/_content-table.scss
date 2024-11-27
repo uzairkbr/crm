@@ -25,4 +25,67 @@
       background-color: var(--color-light-grey);
     }
   }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-block: 16px;
+
+    &-unit {
+      input {
+        padding: 8px 30px;
+        max-width: 169px;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid var(--color-border);
+
+        &::placeholder {
+          font-family: "Poppins", serif;
+        }
+      }
+
+      img {
+        top: 6px;
+        left: 6px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      
+      .content-table__unit {
+        background-color: var(--color-light-grey);
+        font-size: 12px;
+        padding: 8px 12px;
+        text-align: start;
+      }
+
+      .unit-buttons {
+        width: 84px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+
+        button {
+          background-color: var(--color-light-grey);
+          width: 36px;
+          height: 36px;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
 }
